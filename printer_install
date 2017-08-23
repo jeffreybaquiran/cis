@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+TempFolder="/tmp"
+
+cd "$TempFolder"
+
+GetGoogleDriveID="0B5Oni6KH_WfpWlJIVmxpbzFPSlk"
+
+GetGoogleDriveFile="https://drive.google.com/uc?export=download&id=$GetGoogleDriveID"
+
+sudo curl -O -L -J "$GetGoogleDriveFile" 2&>1 > /dev/null
+
+sudo unzip -o CISKMPrinter.zip 2&>1 > /dev/null
+
+sudo spctl --master-disable
+
+sudo open CISKMPrinter.app
+
+sudo rm CISKMPrinter.zip
