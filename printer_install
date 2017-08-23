@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-TempFolder="/tmp"
+TempFolder="~/Downloads"
 
 cd "$TempFolder"
 
